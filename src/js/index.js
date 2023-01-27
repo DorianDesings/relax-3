@@ -1,11 +1,10 @@
 // El styles lo importamos aquí, ya se carga después al compilar todo
 import '../scss/styles.scss';
-import { setName, setNumber, setThing } from './revealDestiny';
+import { calculateAccordionHeight } from './accordion';
 
-const buttonsElement = document.getElementById('buttons');
+const accordionElement = document.getElementById('accordion');
 
-buttonsElement.addEventListener('click', e => {
-  if (e.target.dataset.item === 'name') setName(e.target.dataset.item);
-  else if (e.target.dataset.item === 'number') setNumber(e.target.dataset.item);
-  else if (e.target.dataset.item === 'thing') setThing(e.target.dataset.item);
+accordionElement.addEventListener('click', e => {
+  const element = e.target.nextElementSibling;
+  calculateAccordionHeight(element);
 });
