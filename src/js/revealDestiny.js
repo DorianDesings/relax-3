@@ -1,5 +1,4 @@
 import { DESTINY_ITEMS } from './constants';
-
 const destinyTitle = document.getElementById('destiny-title');
 
 let name;
